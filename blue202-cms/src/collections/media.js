@@ -1,10 +1,15 @@
 const Media = {
     slug: 'media',
     upload: {
-        staticURL: '/media',
-        staticDir: 'media',
+      staticURL: '/media',
+      staticDir: 'media',
     },
-    fields: [],
+    fields: [
+      {
+        name: 'altText',
+        type: 'text',
+      },
+    ],
     endpoints: [],
-};
-module.exports = Media;
+  };
+  module.exports = Media;

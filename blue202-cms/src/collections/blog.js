@@ -44,7 +44,8 @@ const Blog = {
             type: 'richText',
             required: true,
         }
-    ]
+    ],
+    endpoints: [],
 };
 
 module.exports = Blog;

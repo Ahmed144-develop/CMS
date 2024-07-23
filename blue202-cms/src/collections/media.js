@@ -5,6 +5,7 @@ const Media = {
         staticDir: 'media',
     },
     fields: [],
+    endpoints: [],
 };
 
 module.exports = Media;

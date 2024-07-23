@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const payload = require('payload');
 const { collections, globals } = require('./payload.config.js');
 const app = express();
+const config = require('./payload.config.js');
+
 
 require('dotenv').config();
 
@@ -25,9 +27,8 @@ mongoose.connect(mongoURI)
 payload.init({
     secret: payloadSecret,
     mongoURL: mongoURI,
-    express: {
-        app,
-    },
+    config,
+    express: app,
     collections,
     globals,
     onInit: () => {

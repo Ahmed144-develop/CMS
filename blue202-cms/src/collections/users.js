@@ -10,12 +10,8 @@ const Users = {
             type: 'email',
             required: true,
         },
-        {
-            name: 'password',
-            type: 'password',
-            required: true,
-        },
     ],
+    endpoints: [],
 };
 
 module.exports = Users;

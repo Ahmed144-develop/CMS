@@ -1,11 +1,10 @@
-// payload.config.js
 const path = require('path');
 const cors = require('cors');
 const Blog = require('./src/collections/blog');
 const Media = require('./src/collections/media');
 const Users = require('./src/collections/users');
 const mongoose = require('mongoose');
-const adminAuth = require('./src/middleware/adminAuth'); // Import the middleware
+const adminAuth = require('./src/middleware/adminAuth'); 
 
 module.exports = {
   collections: [
@@ -27,6 +26,12 @@ module.exports = {
       }),
       (req, res, next) => {
         next();
+      },
+      (req, res, next) => {
+        if (req.path.startsWith('/admin')) {
+          return adminAuth(req, res, next);
+        }
+        next();
       }
     ],
   },
@@ -46,10 +51,7 @@ module.exports = {
     disable: false,
   },
   routes: {
-    admin: {
-      path: '/admin',
-      preMiddleware: [adminAuth], 
-    },
+    admin: '/admin',
   },
   serverURL: 'http://localhost:3000',
   db: () => mongoose.connect('mongodb://0.0.0.0:27017/payroll'),

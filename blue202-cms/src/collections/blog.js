@@ -3,9 +3,6 @@ const Blog = {
     admin: {
         useAsTitle: 'title',
     },
-    editor: {
-        preview: true,
-    },
     fields: [
         {
             name: 'title',

@@ -1,12 +1,14 @@
-const Blog = require('./blog');
-const Media = require('./media');
-const Users = require('./users');
+const Blog = require('./src/collections/blog');
+const Media = require('./src/collections/media');
+const Users = require('./src/collections/users');
 
 module.exports = {
     collections: [
         Blog,
         Media,
+        Users,
     ],
+    globals: [],
     graphQL: {
         disable: false,
     },
@@ -16,6 +18,6 @@ module.exports = {
     serverURL: 'http://localhost:3000',
     cors: {
         credentials: true,
-        origin: true,
+        origin: '*',
     },
 };

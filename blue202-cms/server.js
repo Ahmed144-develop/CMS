@@ -27,7 +27,6 @@ mongoose.connect(mongoURI)
 payload.init({
     secret: payloadSecret,
     mongoURL: mongoURI,
-    config,
     express: app,
     collections,
     globals,

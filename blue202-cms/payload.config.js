@@ -12,12 +12,14 @@ module.exports = {
     graphQL: {
         disable: false,
     },
+
+    rateLimit: {
+        window: 15*60*1000,
+        max: 100
+    },
     admin: {
         user: 'users',
     },
     serverURL: 'http://localhost:3000',
-    cors: {
-        credentials: true,
-        origin: '*',
-    },
+    cors: '*',
 };

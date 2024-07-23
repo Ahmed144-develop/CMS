@@ -1,5 +1,3 @@
-const { CollectionConfig } = require ('payload/types');
-
 const Media = {
     slug: 'media',
     upload: {

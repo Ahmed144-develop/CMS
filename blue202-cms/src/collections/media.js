@@ -7,5 +7,4 @@ const Media = {
     fields: [],
     endpoints: [],
 };
-
 module.exports = Media;

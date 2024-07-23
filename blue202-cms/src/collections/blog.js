@@ -47,5 +47,4 @@ const Blog = {
     ],
     endpoints: [],
 };
-
 module.exports = Blog;
